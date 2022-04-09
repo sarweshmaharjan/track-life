@@ -26,12 +26,15 @@ const Expenses = mongoose.model(
     },
     created_at: {
       type: Date,
+      default:null
     },
     updated_at: {
       type: Date,
+      default:null
     },
     deleted_at: {
       type: Boolean,
+      default: false
     },
     metadata: {
       type: Object,

@@ -5,18 +5,21 @@
  * @param {Array} keys
  */
 const pick = (obj, keys) => {
-    const newObj = {};
-    Object.keys(obj).map((key)=>{
-        if (keys.includes(key)) {
-            newObj[key] = obj[key];
-          }
-          return key;
-    }); 
-    return newObj;
-  }
+  const newObj = {};
+  Object.keys(obj).map((key) => {
+    if (keys.includes(key)) {
+      newObj[key] = obj[key];
+    }
+    return key;
+  });
+  return newObj;
+};
 
-const helper={
-   pick
-}
+const isEmpty = (arr) => arr.length===0;
 
-export default helper; 
+const _ = {
+  pick,
+  isEmpty,
+};
+
+export default _;
